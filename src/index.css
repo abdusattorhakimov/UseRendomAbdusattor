@@ -1,0 +1,177 @@
+/* SITE FONT FACE */
+@font-face {
+  font-family: "Jost";
+  src: url("../fonts/Jost-Bold.woff2") format("woff2"),
+    url("../fonts/Jost-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Jost";
+  src: url("../fonts/Jost-Medium.woff2") format("woff2"),
+    url("../fonts/Jost-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DM Serif Display";
+  src: url("../fonts/DMSerifDisplay-Regular.woff2") format("woff2"),
+    url("../fonts/DMSerifDisplay-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Jost";
+  src: url("../fonts/Jost-Regular.woff2") format("woff2"),
+    url("../fonts/Jost-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* CUSTOM PROPERTY */
+:root {
+  /* fonts */
+  --serif-display: "DM Serif Display", "Georgia", serif;
+  --jost-text: "Jost", "Arial", sans-serif;
+  /* colors */
+  --primary-color: #cda274;
+  --secondary-color: #292f36;
+  --white-color: #fff;
+  --refresh-color: #fff;
+  --black-color: #000;
+  --shadow-color: rgba(41, 47, 54, 0.2);
+  /* background colors */
+  --white-bg-color: #fff;
+  --dark-bg-color: #292f36;
+  --color--btn: #000;
+}
+
+/* GLOBAL STYLES */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+*:focus {
+  outline: 1px dashed var(--primary-color);
+  outline-offset: 2px;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+ul,
+ol {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+html {
+  height: 100%;
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+body {
+}
+.dark-mode {
+  /* colors */
+  --primary-color: #cda274;
+  --secondary-color: #cda274;
+  --white-color: #fff;
+  --black-color: #000;
+  --shadow-color: rgba(0, 0, 0, 0.2);
+  --refresh-color: #292f36;
+  /* background colors */
+  --white-bg-color: #292f36;
+  --dark-bg-color: #fff;
+  --color--btn: #fff;
+}
+
+i {
+  color: var(--color--btn);
+  pointer-events: none;
+}
+
+.clear__button {
+  margin-left: 0.5rem;
+}
+
+.fa-broom {
+  color: var(--refresh-color);
+}
+
+.hidden {
+  display: none !important;
+}
+.container {
+  width: 100%;
+  max-width: 1150px;
+  padding: 0 2rem;
+  margin: 0 auto;
+}
+/* RESPONSIVE */
+@media only screen and (max-width: 768px) {
+  /* for
+    .form__input {
+        width: 100%;
+    } */
+  .user {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .form {
+    width: 100%;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .form__input {
+    width: 100%;
+  }
+
+  .form__button,
+  .clear__button {
+    padding: 1rem 0.5rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+
+  .clear__button {
+    margin-left: 0;
+  }
+
+  .user {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .form {
+    flex-direction: column;
+  }
+  .form__button {
+    padding: 1rem 0;
+  }
+  .form__button-inner {
+    justify-content: center;
+  }
+}

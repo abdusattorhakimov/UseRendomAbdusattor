@@ -1,0 +1,27 @@
+/* HEADER STYLES */
+.header {
+  padding: 2rem 0;
+  background-color: var(--white-bg-color);
+  transition: all 0.3s ease;
+}
+.header__container {
+  display: flex;
+  align-items: center;
+}
+.site-logo {
+  display: flex;
+  align-items: center;
+}
+.header .site-logo {
+  margin-right: auto;
+}
+.site-logo svg {
+  margin-right: 0.5rem;
+}
+.site-logo span {
+  color: var(--primary-color);
+  font-family: var(--serif-display);
+  font-weight: 400;
+  font-size: 3rem;
+  letter-spacing: 0.5px;
+}
