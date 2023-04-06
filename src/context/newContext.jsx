@@ -13,17 +13,14 @@ function chengContextValue(state, action) {
 const ThemeContext = createContext();
 function Usecontextprovider({ children }) {
   const [state, dispatch] = useReducer(chengContextValue, {
-    color: "#576cbc",
     mode: "light",
   });
-  function changeColor(color) {
-    dispatch({ type: "CHANGE__COLOR", payload: color });
-  }
+
   function changeMode(mode) {
     dispatch({ type: "CHANGE__MODE", payload: mode });
   }
   return (
-    <ThemeContext.Provider value={{ ...state, changeColor, changeMode }}>
+    <ThemeContext.Provider value={{ ...state, changeMode }}>
       {children}
     </ThemeContext.Provider>
   );

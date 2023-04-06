@@ -38,7 +38,9 @@ const Home = () => {
         <div className="container">
           <p>
             by
-            <a href="#">Hakimov Abdusattor</a>
+            <a href="https://github.com/abdusattorhakimov/AbdusattorCoocking.git">
+              Hakimov Abdusattor
+            </a>
           </p>
         </div>
       </footer>
